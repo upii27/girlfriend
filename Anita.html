@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Anita 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe0ec, #ffd6ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #fff0f5;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #ff69b4;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+    .photo-section {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .photo-section img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ff69b4;
+      animation: popIn 1.5s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .message-section {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+    .message-section h2 {
+      text-align: center;
+      color: #ff1493;
+      margin-bottom: 1rem;
+    }
+    .message-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 100;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      transform: rotate(45deg);
+      animation: float 5s linear infinite;
+    }
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      top: 0;
+      left: -10px;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts"></div>
+  <header>
+    <h1>Hi Anita! 💖</h1>
+    <p>Selamat Girlfriend Day! Anita ini halaman hanya website simpel, tapi aku buat dengan penuh effort~</p>
+  </header>  <div class="photo-section">
+    <!-- Ganti src dengan foto dia nanti -->
+    <img src="foto-Anitaa.jpg" alt="Foto Anita">
+  </div>  <div class="message-section">
+    <h2>✨ Kamu itu spesial ✨</h2>
+    <p>
+      (Isi kata-kata manis nanti di sini ya... bisa cerita lucu, kenangan manis, atau alasan sayang kamu ke dia 💕)
+    </p>
+  </div>  <iframe width="0" height="0"
+    src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&loop=1&playlist=2Vv-BfVoq4g"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen
+    hidden></iframe>  <script>
+    // Generate floating hearts
+    const heartsContainer = document.querySelector('.hearts');
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+      heartsContainer.appendChild(heart);
+    }
+  </script></body>
+</html>
